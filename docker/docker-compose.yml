@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  python3:
+    build:
+      context: ../
+      dockerfile: ./docker/python/Dockerfile
+    image: algorithm_python
+    container_name: algorithm_python
+    restart: always
+    working_dir: '/opt/app/'
+    tty: true
+    volumes:
+      - ../python/:/opt/app/
